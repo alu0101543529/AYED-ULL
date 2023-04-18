@@ -56,7 +56,7 @@ template <class T> class sll_node_t {
  * @return: Devuelve la salida por pantalla del valor del pair que representa el nodo (valor/índice).
  */
 template <class T> 
-std::ostream& sll_node_t<T>::write(std::ostream& os) const  {
+std::ostream& sll_node_t<T>::write(std::ostream& os) const {
   os << data_;
   return os;
 }

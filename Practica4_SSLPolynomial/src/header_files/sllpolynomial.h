@@ -71,7 +71,7 @@ bool IsNotZero(const double val, const double eps = EPS) {
 // FASE II
 
 /**
- * @brief Construye una lista simple enlazada (sll) a partir de un vector disperso de números decimales en punto flotante con doble precisión (double).
+ * @brief Construye una lista enlazada simple (sll) a partir de un vector disperso de números decimales en punto flotante con doble precisión (double).
  * @param[in] v: referencia (constante) al vector parametrizado v.
  * @param[in] eps: constante de tolerancia de error (1.0e-6).
  */
@@ -88,7 +88,7 @@ SllPolynomial::SllPolynomial(const vector_t<double>& v, const double eps) {
 //------------OPERADORES I/O----------------
 
 /**
- * @brief Imprime por pantalla el polinomio disperso en función de una lista simple enlazada (sll).
+ * @brief Imprime por pantalla el polinomio disperso en función de una lista enlazada simple (sll).
  * @param[in] os: referencia al objeto ostream (flujo de datos de salida).
  */
 void SllPolynomial::Write(std::ostream& os) const {
@@ -114,7 +114,7 @@ void SllPolynomial::Write(std::ostream& os) const {
 /**
  * @brief sobrecarga del operador de flujo de salida (<<).
  * @param[in] os: referencia al objeto ostream (flujo de datos de salida).
- * @param[in] p: referencia (constante) al polinomio disperso en función de una lista simple enlazada (sll) p.
+ * @param[in] p: referencia (constante) al polinomio disperso en función de una lista enlazada simple (sll) p.
  * @return Devuelve la sobrecarga del operador de flujo de salida (<<) para el método write().
  */
 std::ostream& operator << (std::ostream& os, const SllPolynomial& p) {
@@ -141,7 +141,7 @@ double SllPolynomial::Eval(const double x) const {
 
 /**
  * @brief Compara si dos polinomios dispersos representados por listas enlazadas simples (sll) son iguales.
- * @param[in] sllpol: referencia (constante) del polinomio disperso representado por una lista simple enlazada (sll).
+ * @param[in] sllpol: referencia (constante) del polinomio disperso representado por una lista enlazada simple (sll).
  * @param[in] eps: constante de tolerancia de error (1.0e-6).
  */
 bool SllPolynomial::IsEqual(const SllPolynomial& sllpol,
@@ -164,8 +164,8 @@ bool SllPolynomial::IsEqual(const SllPolynomial& sllpol,
 
 /**
  * @brief Suma dos polinomios dispersos representados por listas enlazadas simples (sll).
- * @param[in] sllpol: referencia (constante) del polinomio disperso representado por una lista simple enlazada (sll) a sumar.
- * @param[in] sllpolsum: referencia del polinomio disperso representado por una lista simple enlazada (sll) que contiene los valores sumados.
+ * @param[in] sllpol: referencia (constante) del polinomio disperso representado por una lista enlazada simple (sll) a sumar.
+ * @param[in] sllpolsum: referencia del polinomio disperso representado por una lista enlazada simple (sll) que contiene los valores sumados.
  * @param[in] eps: constante de tolerancia de error (1.0e-6).
  */
 void SllPolynomial::Sum (const SllPolynomial& sllpol,
@@ -209,8 +209,8 @@ void SllPolynomial::Sum (const SllPolynomial& sllpol,
 // MODIFICACIÓN
 /**
  * @brief Resta dos polinomios dispersos representados por listas enlazadas simples (sll).
- * @param[in] sllpol: referencia (constante) del polinomio disperso representado por una lista simple enlazada (sll) a restar.
- * @param[in] sllpolsust: referencia del polinomio disperso representado por una lista simple enlazada (sll) que contiene los valores restados.
+ * @param[in] sllpol: referencia (constante) del polinomio disperso representado por una lista enlazada simple (sll) a restar.
+ * @param[in] sllpolsust: referencia del polinomio disperso representado por una lista enlazada simple (sll) que contiene los valores restados.
  * @param[in] eps: constante de tolerancia de error (1.0e-6).
  */
 void SllPolynomial::Sust(const SllPolynomial& sllpol,

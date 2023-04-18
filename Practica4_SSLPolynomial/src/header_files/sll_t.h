@@ -14,10 +14,9 @@
 
 #include "sll_node_t.h"
 
-// Clase para almacenar una lista simplemente enlazada
 /**
  * @brief Clase Sll_t
- * Clase para almacenar una lista simplemente enlazada.
+ * Clase para almacenar una lista simplemente enlazada (sll).
  */
 template <class T> 
 class sll_t {
@@ -32,31 +31,31 @@ class sll_t {
   /// Getter para obtener la primera posición (head) de una lista enlazada simple (sll)
   sll_node_t<T>* get_head(void) const { return head_; };
   
-  /// Comprueba si una lista simple enlazada (sll) está vacía
+  /// Comprueba si una lista enlazada simple (sll) está vacía
   bool empty(void) const;
 
   //-------OPERACIONES-------
 
-  /// Inserta un nodo después del primer nodo (head) de la lista simple enlazada (sll)
+  /// Inserta un nodo después del primer nodo (head) de la lista enlazada simple (sll)
   void push_front(sll_node_t<T>*);
 
-  /// Inserta un nodo al principio de la lista simple enlazada (sll), siendo este nuevo el primero (head)
+  /// Inserta un nodo al principio de la lista enlazada simple (sll), siendo este nuevo el primero (head)
   sll_node_t<T>* pop_front(void);
 
-  /// Inserta un nodo al final de la lista simple enlazada (sll)
+  /// Inserta un nodo al final de la lista enlazada simple (sll)
   void push_back(sll_node_t<T>*);
 
-  /// Inserta un nodo después de un nodo determinado en la lista simple enlazada (sll)
+  /// Inserta un nodo después de un nodo determinado en la lista enlazada simple (sll)
   void insert_after(sll_node_t<T>*, sll_node_t<T>*);
 
-  /// Elimina un nodo después de un nodo determinado en la lista simple enlazada (sll)
+  /// Elimina un nodo después de un nodo determinado en la lista enlazada simple (sll)
   sll_node_t<T>* erase_after(sll_node_t<T>*);
 
-  /// Busca un nodo en la lista simple enlazada (sll)
+  /// Busca un nodo en la lista enlazada simple (sll)
   sll_node_t<T>* search(const T&) const;
 
   //------MÉTODOS I/O------
-  /// Escribe el valor introducido en un nodo de la lista simple enlazada (sll)
+  /// Escribe el valor introducido en un nodo de la lista enlazada simple (sll)
   std::ostream& write(std::ostream& = std::cout) const;
 
  private:
@@ -66,7 +65,7 @@ class sll_t {
 //----------MÉTODOS DE LA CLASE SLL-------------
 
 /**
- * @brief Destruye un nodo de la lista simple enlazada (sll).
+ * @brief Destruye un nodo de la lista enlazada simple (sll).
  */
 template <class T> 
 sll_t<T>::~sll_t(void) {
@@ -78,7 +77,7 @@ sll_t<T>::~sll_t(void) {
 }
 
 /**
- * @brief Comprueba si la lista simple enlazada (sll) está vacía.
+ * @brief Comprueba si la lista enlazada simple (sll) está vacía.
  * @return Devuelve true si está vacía, es decir, que head apunta a NULL.
  */
 template <class T> 
@@ -89,8 +88,8 @@ bool sll_t<T>::empty(void) const {
 //-------OPERACIONES-------
 
 /**
- * @brief Inserta un nodo después del primer nodo (head) de la lista simple enlazada (sll).
- * @param[in] n: nodo a insertar en la lista simple enlazada (sll).
+ * @brief Inserta un nodo después del primer nodo (head) de la lista enlazada simple (sll).
+ * @param[in] n: nodo a insertar en la lista enlazada simple (sll).
  */
 template <class T> 
 void sll_t<T>::push_front(sll_node_t<T>* n) {
@@ -101,7 +100,7 @@ void sll_t<T>::push_front(sll_node_t<T>* n) {
 }
 
 /**
- * @brief Inserta un nodo al principio de la lista simple enlazada (sll), siendo este nuevo el primero (head).
+ * @brief Inserta un nodo al principio de la lista enlazada simple (sll), siendo este nuevo el primero (head).
  * @return Devuelve el nodo insertado, es decir, el "nuevo" head.
  */
 template <class T> 
@@ -115,8 +114,8 @@ sll_node_t<T>* sll_t<T>::pop_front(void) {
 }
 
 /**
- * @brief Inserta un nodo al final de la lista simple enlazada (sll), siendo el último valor insertado, el último nodo de la lista.
- * @return Devuelve el nodo insertado.
+ * @brief Inserta un nodo al final de la lista enlazada simple (sll), siendo el último valor insertado, el último nodo de la lista.
+ * @param[in] n: nodo a insertar en la lista enlazada simple (sll).
  */
 template <class T>
 void sll_t<T>::push_back(sll_node_t<T>* n) {
@@ -134,9 +133,9 @@ void sll_t<T>::push_back(sll_node_t<T>* n) {
 }
 
 /**
- * @brief Inserta un nodo después de un nodo determinado en la lista simple enlazada (sll).
- * @param[in] prev: nodo previo al que se va a insertar en la lista simple enlazada (sll).
- * @param[in] n: nodo a insertar en la lista simple enlazada (sll).
+ * @brief Inserta un nodo después de un nodo determinado en la lista enlazada simple (sll).
+ * @param[in] prev: nodo previo al que se va a insertar en la lista enlazada simple (sll).
+ * @param[in] n: nodo a insertar en la lista enlazada simple (sll).
  */
 template <class T> 
 void sll_t<T>::insert_after(sll_node_t<T>* prev,
@@ -148,9 +147,9 @@ void sll_t<T>::insert_after(sll_node_t<T>* prev,
 }
 
 /**
- * @brief Elimina un nodo después de un nodo determinado en la lista simple enlazada (sll)
- * @param[in] prev: nodo previo al que se va a eliminar en la lista simple enlazada (sll).
- * @return Devuelve el nodo previo al eliminado.
+ * @brief Elimina un nodo después de un nodo determinado en la lista enlazada simple (sll)
+ * @param[in] prev: nodo previo al que se va a eliminar en la lista enlazada simple (sll).
+ * @return Devuelve el nodo eliminado.
  */
 template <class T> 
 sll_node_t<T>* sll_t<T>::erase_after(sll_node_t<T>* prev) { 
@@ -166,9 +165,9 @@ sll_node_t<T>* sll_t<T>::erase_after(sll_node_t<T>* prev) {
 }
 
 /**
- * @brief Busca un nodo en la lista simple enlazada (sll).
- * @param[in] d: dato a buscar en los nodos de la lista simple enlazada (sll).
- * @return Devuelve el nodo que se está buscando en la lista simple enlazada (sll).
+ * @brief Busca un nodo en la lista enlazada simple (sll).
+ * @param[in] d: dato a buscar en los nodos de la lista enlazada simple (sll).
+ * @return Devuelve el nodo que se está buscando en la lista enlazada simple (sll).
  */
 template <class T> 
 sll_node_t<T>* sll_t<T>::search(const T& d) const {
@@ -182,9 +181,9 @@ sll_node_t<T>* sll_t<T>::search(const T& d) const {
 //------------OPERADORES I/O----------------
 
 /**
- * @brief Escribe el valor introducido en un nodo de la lista simple enlazada (sll).
+ * @brief Escribe el valor introducido en un nodo de la lista enlazada simple (sll).
  * @param[in] os: referencia al objeto ostream (flujo de datos de salida).
- * @return: Devuelve la escritura en el nodo de la lista simple enlazada (sll) del valor del pair que representa el nodo (valor/índice).
+ * @return: Devuelve la escritura en el nodo de la lista enlazada simple (sll) del valor del pair que representa el nodo (valor/índice).
  */
 template <class T> 
 std::ostream& sll_t<T>::write(std::ostream& os) const {
