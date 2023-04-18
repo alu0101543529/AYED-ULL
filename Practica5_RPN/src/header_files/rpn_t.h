@@ -81,7 +81,7 @@ void rpn_t<T>::operate_(const char c) {
   std::cout << "   Sacamos de la pila un operando: " << b << std::endl;
   stack_.pop();
 
-  if (c != 'r' && c != 'l' && c != 'c') {
+  if (c != 'r' && c != 'l' && c != 'c') {    // Operadores de aridad 1 (unarios)
     a = stack_.top();
     std::cout << "   Sacamos de la pila otro operando: " << a << std::endl;
     stack_.pop();
