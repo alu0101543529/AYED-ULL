@@ -75,7 +75,7 @@ const int rpn_t<T>::evaluate(queue_l_t<char>& q) {
  */
 template <class T> 
 void rpn_t<T>::operate_(const char c) {
-  assert(c == '+' || c == '-' || c == '*' || c == '/' || c == '^' || c == 'r' || c == 'l' || c == 'c');
+  assert(c == '+' || c == '-' || c == '*' || c == '/' || c == '^' || c == 'r' || c == 'l' || c == 'c' || c == '>');
 
   int a, b = stack_.top();
   std::cout << "   Sacamos de la pila un operando: " << b << std::endl;
@@ -126,6 +126,18 @@ void rpn_t<T>::operate_(const char c) {
     case 'c': {
       stack_.push(pow(b, 2));
       break;
+    }
+
+    // MODIFICACIÓN
+    case '>': {
+      if (a > b) {
+        stack_.push(a);
+        break;
+      }
+      else {
+        stack_.push(b);
+        break;
+      }
     }
   }
 
