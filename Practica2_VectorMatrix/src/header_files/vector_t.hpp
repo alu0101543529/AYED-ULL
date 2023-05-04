@@ -14,7 +14,7 @@
 
 using namespace std;
 
-template<class T>
+template <class T>
 
 /**
  * @brief Clase Vector_t
@@ -90,7 +90,7 @@ vector_t<T>::~vector_t() { destroy(); }
 /**
  * @brief Crea un vector que apunta a una dirección especifica (!= NULL).
  */
-template<class T>
+template <class T>
 void vector_t<T>::build() {
   v_ = NULL;                  // Se coge un vector que está apuntando a NULL (0).
   if (sz_ != 0) {             

@@ -57,7 +57,7 @@ class matrix_t {
   /// Lectura de matrices
   void read (istream& = cin);
 
-  private:
+ private:
   int m_, n_; // ATRIBUTOS (m_ -> filas; n_ -> columnas)
   vector_t <T> v_;       // v_ -> vector 
   
