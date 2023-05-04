@@ -13,5 +13,8 @@ run3:
 run4:
 	./main_rpn_t < data/data_rpn_t_4.txt
 
+run_modi:
+	./main_rpn_t < data/data_rpn_t_5.txt
+
 clean:
 	rm main_rpn_t
